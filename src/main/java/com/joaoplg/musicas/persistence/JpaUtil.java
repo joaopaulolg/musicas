@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 public class JpaUtil {
 
-   private static final String PERSISTENCE_UNIT = "musicas";
+   private static final String PERSISTENCE_UNIT = "ripandoBaseConhecimento";
    
    private static EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
    
