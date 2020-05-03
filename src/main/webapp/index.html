@@ -1,43 +1,10 @@
 <!doctype html>
-<html lang="pt-BR" ng-app="ripandoBaseConhecimento">
+<html lang="pt-br" ng-app="ripandoBaseConhecimento">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Ripando a História do Rock - Base de Conhecimento</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
-    </head>
-	<header>
-        <h1 class="display-3 text-center">Ripando a História do Rock - Base de Conhecimento</h1>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link font-weight-bold" href="#">Artistas</a>
-              </li>
-              <li class="nav-item font-weight-bold">
-                <a class="nav-link" href="#">Estilos</a>
-              </li>
-              <li class="nav-item font-weight-bold">
-                <a class="nav-link" href="#">Gravadoras</a>
-              </li>
-              <li class="nav-item font-weight-bold">
-                <a class="nav-link" href="#">Bandas</a>
-              </li>
-              <li class="nav-item font-weight-bold">
-                <a class="nav-link" href="#">Álbuns</a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="pesquise aqui" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0 font-weight-bold" type="submit">Pesquisa</button>
-            </form>
-          </div>
-        </nav>
-    </header>
-    <body>
-        <div class="container">
-            <ng-view></ng-view>
-        </div>
         
         <script src="js/lib/jquery-3.4.1.slim.min.js"></script>
         <script src="js/lib/popper.min.js"></script>
@@ -49,10 +16,12 @@
         
         <script src="js/main.js"></script>
         <script src="js/controllers/MainController.js"></script>
+        <script src="js/controllers/ArtistasController.js"></script>
+        <script src="js/controllers/EstilosController.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <ng-view></ng-view>
+        </div>
     </body>
-    <footer>
-        <span>
-            <p>@Ripando a História do Rock</p>
-        </span>
-    </footer>
 </html>
