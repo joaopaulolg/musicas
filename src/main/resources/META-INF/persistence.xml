@@ -4,13 +4,22 @@
    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
    version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
    <persistence-unit name="ripandoBaseConhecimento" transaction-type="RESOURCE_LOCAL">
+      <class>com.joaoplg.musicas.entities.Album</class>
+      <class>com.joaoplg.musicas.entities.Artista</class>
+      <class>com.joaoplg.musicas.entities.ArtistaIndividual</class>
+      <class>com.joaoplg.musicas.entities.Banda</class>
+      <class>com.joaoplg.musicas.entities.Estilo</class>
+      <class>com.joaoplg.musicas.entities.Gravadora</class>
+      <class>com.joaoplg.musicas.entities.MembrosBanda</class>
+      <class>com.joaoplg.musicas.entities.Musica</class>
+      
       <properties>
          <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
          <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/musicas?serverTimezone=UTC" />
          <property name="javax.persistence.jdbc.user" value="usrmusica" />
          <property name="javax.persistence.jdbc.password" value="musica1!" />
          <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
-         <property name="show_sql" value="true"/>
+         <property name="show_sql" value="false"/>
       </properties>
    </persistence-unit>
 </persistence>

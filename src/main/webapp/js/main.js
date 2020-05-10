@@ -1,5 +1,5 @@
 angular.module("ripandoBaseConhecimento", ["ngRoute"])
-.config(function($routeProvider) {
+.config(function($routeProvider, $locationProvider) {
     $routeProvider.when("/principal", {
         templateUrl: "partials/principal.html",
         controller: "MainController"

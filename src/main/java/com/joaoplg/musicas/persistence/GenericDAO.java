@@ -13,7 +13,7 @@ import com.joaoplg.musicas.entities.Entidade;
 
 public class GenericDAO<T extends Entidade> {
 
-   private static final String PERSISTENCE_UNIT = "musicas";
+   private static final String PERSISTENCE_UNIT = "ripandoBaseConhecimento";
    
    private static EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
    
