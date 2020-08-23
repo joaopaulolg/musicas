@@ -1,0 +1,11 @@
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+
+import {ListaArtistasComponent} from './lista-artistas.component';
+
+@NgModule({
+    declarations: [ListaArtistasComponent],
+    imports: [CommonModule],
+    exports: [ListaArtistasComponent]
+})
+export class ListaArtistasModule {}
