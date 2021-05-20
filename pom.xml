@@ -61,8 +61,7 @@
             <configuration>
                <driver>com.mysql.cj.jdbc.Driver</driver>
                <url>jdbc:mysql://localhost:3306/musicas?serverTimezone=UTC</url>
-               <user>usrmusica</user>
-               <password>musica1!</password>
+               <serverId>ripando</serverId>
                <!--
                <schemas>
                   <schema>musicas</schema>
