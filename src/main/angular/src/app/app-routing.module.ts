@@ -6,17 +6,17 @@ import {ListaArtistasComponent} from './artistas/lista-artistas/lista-artistas.c
 
 const routes: Routes = [
     {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'home'
-    },
-    {
         path: 'home',
         component: HomeComponent
     },
     {
         path: 'listarArtistas', 
         component: ListaArtistasComponent
+    },
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home'
     },
 ];
 

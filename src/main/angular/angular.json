@@ -24,10 +24,12 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "src/styles.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ],
             "vendorChunk": true,
@@ -102,15 +104,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         },
@@ -131,6 +129,7 @@
   },
   "defaultProject": "angular",
   "cli": {
-    "analytics": "92d1266c-6725-463d-a24d-4e8a76a074cd"
+    "analytics": "92d1266c-6725-463d-a24d-4e8a76a074cd",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
