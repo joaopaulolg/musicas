@@ -1,75 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-   <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-   <groupId>com.joaoplg</groupId>
-   <artifactId>ripandoBaseConhecimento</artifactId>
-   <version>1.0-SNAPSHOT</version>
-   <packaging>war</packaging>
-   <name>Ripando a História do Rock - Base de Conhecimento</name>
+    <groupId>com.joaoplg</groupId>
+    <artifactId>ripandoBaseConhecimento</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>Ripando a História do Rock - Base de Conhecimento</name>
 
-   <properties>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-   </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-   <dependencies>
-      <dependency>
-         <groupId>org.junit.jupiter</groupId>
-         <artifactId>junit-jupiter</artifactId>
-         <version>5.6.2</version>
-         <scope>test</scope>
-      </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.6.2</version>
+            <scope>test</scope>
+        </dependency>
 
-      <dependency>
-         <groupId>mysql</groupId>
-         <artifactId>mysql-connector-java</artifactId>
-         <version>8.0.16</version>
-      </dependency>
-      
-      <dependency>
-         <groupId>javax</groupId>
-         <artifactId>javaee-api</artifactId>
-         <version>8.0.1</version>
-         <scope>provided</scope>
-      </dependency>
-   </dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
+        </dependency>
 
-   <build>
-      <finalName>ripandoBaseConhecimento</finalName>
-	  <plugins>
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-			   <version>3.8.1</version>
-            <configuration>
-               <release>11</release>
-            </configuration>
-         </plugin>
-         <plugin>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-maven-plugin</artifactId>
-            <version>7.7.3</version>
-            <dependencies>
-               <dependency>
-                  <groupId>mysql</groupId>
-                  <artifactId>mysql-connector-java</artifactId>
-                  <version>8.0.16</version>
-               </dependency>
-            </dependencies>
-            <configuration>
-               <driver>com.mysql.cj.jdbc.Driver</driver>
-               <url>jdbc:mysql://localhost:3306/musicas?serverTimezone=UTC</url>
-               <serverId>ripando</serverId>
-               <!--
-               <schemas>
-                  <schema>musicas</schema>
-               </schemas>
-               -->
-            </configuration>
-         </plugin>
-	  </plugins>
-   </build>
-   
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>8.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>ripandoBaseConhecimento</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <release>11</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>7.9.2</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.16</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <driver>com.mysql.cj.jdbc.Driver</driver>
+                    <url>jdbc:mysql://localhost:3306/musicas?serverTimezone=UTC</url>
+                    <serverId>ripando</serverId>
+                    <!-- <schemas> <schema>musicas</schema> </schemas> -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
