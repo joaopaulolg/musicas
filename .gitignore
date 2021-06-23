@@ -27,3 +27,7 @@ hs_err_pid*
 .project
 target/
 .settings/
+
+# Angular
+src/main/angular/node_modules/
+src/main/angular/dist/
