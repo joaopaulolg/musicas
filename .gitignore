@@ -31,3 +31,4 @@ target/
 # Angular
 src/main/angular/node_modules/
 src/main/angular/dist/
+src/main/angular/.vscode/

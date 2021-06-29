@@ -1,0 +1,31 @@
+<table class="table table-sm table-bordered mt-4">
+  <thead class="thead-light">
+    <tr class="text-center">
+      <th style="width: 90%">Nome</th>
+      <th style="width: 10%">*</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let artista of artistas">
+    <td class="p-0 text-center">{{ artista.nome }}</td>
+    <td class="p-0 text-center">
+      <a class="btn btn-link p-0" (click)="editar(artista.id)">
+        <i class="fas fa-edit mr-1" style="color:black"></i>
+      </a>
+      <a class="btn btn-link p-0" (click)="excluir(artista.id)">
+        <i class="fas fa-trash" style="color:black"></i>
+      </a>
+    </td>
+  </tr>
+  <tfoot>
+    <tr>
+      <td colspan="2" class="text-right">
+        <div>
+          <a class="btn btn-dark" (click)="adicionar()">
+            <i class="far fa-file"></i>
+            <span class="text-white font-weight-bold ml-2">Novo Artista</span>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tfoot>
+</table>
