@@ -1,0 +1,29 @@
+MySQL
+* Instalação:
+- descompactar o arquivo zip;
+- criar arquivo my.ini com entradas apontando para basedir e datadir. Exemplo:
+
+ [mysqld]
+ # set basedir to your installation path
+ basedir=C:\\dev\\mysql-8.0.26-winx64
+ # set datadir to the location of your data directory
+ datadir=C:\\dev\\MySQLData
+
+- inicializar a base de dados com o seguinte comando:
+ mysqld --initialize --console
+(cria a base de dados e a senha inicial do root)
+- iniciar o servidor com o seguinte comando:
+ mysqld --console
+- conectar-se no servidor com o usuário root e trocar a sua senha gerada:
+ mysql -u root -p
+(informar a senha gerada no initialize)
+ ALTER USER 'root'@'localhost' IDENTIFIED BY '<nova senha>';
+- para realizar o shutdown do MySQL:
+ mysqladmin -u root -p shutdown
+- para criar o usuário da aplicação:
+ CREATE USER 'usrmusica'@'localhost' IDENTIFIED BY '<senha>';
+- cria a base de dados que conterá as tabelas: 
+ CREATE DATABASE MUSICAS;
+- concede permissão na base criada para o usuário:
+ GRANT ALL ON musicas.* TO 'usrmusica'@'localhost';
+ 
