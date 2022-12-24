@@ -6,8 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.joaoplg</groupId>
-    <artifactId>ripandoBaseConhecimento</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>ripando-base-conhecimento</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Ripando a História do Rock - Base de Conhecimento</name>
 
@@ -39,7 +39,7 @@
     </dependencies>
 
     <build>
-        <finalName>ripandoBaseConhecimento</finalName>
+        <finalName>ripando-base-conhecimento</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
