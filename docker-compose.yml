@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  wildfly:
+    image: quay.io/wildfly/wildfly:28.0.1.Final-jdk11
+    ports:
+      - 8080:8080
+    networks:
+      - isolated
+  mysql:
+    image: mysql:8.0.33
+    environment:
+      - MYSQL_ROOT_PASSWORD=supersecret 
+    ports:
+      - 3311:3306
+    networks:
+      - isolated
+
+networks: 
+  isolated:
+    driver: bridge

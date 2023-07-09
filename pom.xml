@@ -69,7 +69,7 @@
                     <driver>com.mysql.cj.jdbc.Driver</driver>
                     <url>jdbc:mysql://localhost:3306/musicas?serverTimezone=UTC</url>
                     <serverId>ripando</serverId>
-                    <!-- <schemas> <schema>musicas</schema> </schemas> -->
+                    <!-- usando docker, como pegar a senha definida lá no docker compose? -->
                 </configuration>
             </plugin>
         </plugins>
