@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListaAlbunsComponent } from './lista-albuns.component';
 
 @NgModule({
-  declarations: [ListaAlbunsComponent],
-  imports: [CommonModule],
-  exports: [ListaAlbunsComponent],
+    imports: [CommonModule, ListaAlbunsComponent],
+    exports: [ListaAlbunsComponent],
 })
 export class AlbunsModule {}

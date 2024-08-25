@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableModule, MatTable, MatColumnDef, MatHeaderCellDef, MatHeaderCell, MatCellDef, MatCell, MatFooterCellDef, MatFooterCell, MatHeaderRowDef, MatHeaderRow, MatRowDef, MatRow, MatFooterRowDef, MatFooterRow } from '@angular/material/table';
 
 import { Artista } from '../shared/model/artista';
 
@@ -7,6 +7,23 @@ import { Artista } from '../shared/model/artista';
     selector: 'rip-lista-artistas',
     templateUrl: './lista-artistas.component.html',
     styleUrls: ['./lista-artistas.component.css'],
+    standalone: true,
+    imports: [
+        MatTable,
+        MatColumnDef,
+        MatHeaderCellDef,
+        MatHeaderCell,
+        MatCellDef,
+        MatCell,
+        MatFooterCellDef,
+        MatFooterCell,
+        MatHeaderRowDef,
+        MatHeaderRow,
+        MatRowDef,
+        MatRow,
+        MatFooterRowDef,
+        MatFooterRow,
+    ],
 })
 export class ListaArtistasComponent implements OnInit {
     artistas: Artista[];

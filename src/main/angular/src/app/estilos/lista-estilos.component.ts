@@ -1,10 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Estilo } from '../shared/model/estilo';
+import { MatTable, MatColumnDef, MatHeaderCellDef, MatHeaderCell, MatCellDef, MatCell, MatFooterCellDef, MatFooterCell, MatHeaderRowDef, MatHeaderRow, MatRowDef, MatRow, MatFooterRowDef, MatFooterRow } from '@angular/material/table';
 
 @Component({
     selector: 'rip-lista-estilos',
     templateUrl: './lista-estilos.component.html',
     styleUrls: ['./lista-estilos.component.css'],
+    standalone: true,
+    imports: [
+        MatTable,
+        MatColumnDef,
+        MatHeaderCellDef,
+        MatHeaderCell,
+        MatCellDef,
+        MatCell,
+        MatFooterCellDef,
+        MatFooterCell,
+        MatHeaderRowDef,
+        MatHeaderRow,
+        MatRowDef,
+        MatRow,
+        MatFooterRowDef,
+        MatFooterRow,
+    ],
 })
 export class ListaEstilosComponent implements OnInit {
     estilos: Estilo[];

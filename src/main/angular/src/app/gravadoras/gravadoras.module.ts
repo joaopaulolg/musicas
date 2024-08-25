@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListaGravadorasComponent } from './lista-gravadoras.component';
 
 @NgModule({
-  declarations: [ListaGravadorasComponent],
-  imports: [CommonModule],
-  exports: [ListaGravadorasComponent],
+    imports: [CommonModule, ListaGravadorasComponent],
+    exports: [ListaGravadorasComponent],
 })
 export class GravadorasModule {}

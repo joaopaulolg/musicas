@@ -5,8 +5,7 @@ import { HeaderComponent } from './header.component';
 import { HomeComponent } from './home.component';
 
 @NgModule({
-  declarations: [HeaderComponent, HomeComponent],
-  imports: [CommonModule, RouterModule],
-  exports: [HeaderComponent, HomeComponent],
+    imports: [CommonModule, RouterModule, HeaderComponent, HomeComponent],
+    exports: [HeaderComponent, HomeComponent],
 })
 export class CoreModule {}

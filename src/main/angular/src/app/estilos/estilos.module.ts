@@ -4,8 +4,7 @@ import { ListaEstilosComponent } from './lista-estilos.component';
 import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
-    declarations: [ListaEstilosComponent],
-    imports: [CommonModule, MatTableModule],
+    imports: [CommonModule, MatTableModule, ListaEstilosComponent],
     exports: [ListaEstilosComponent],
 })
 export class EstilosModule {}

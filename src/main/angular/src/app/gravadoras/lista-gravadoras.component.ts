@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Gravadora } from '../shared/model/gravadora';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'rip-lista-gravadoras',
-  templateUrl: './lista-gravadoras.component.html',
-  styleUrls: ['./lista-gravadoras.component.css']
+    selector: 'rip-lista-gravadoras',
+    templateUrl: './lista-gravadoras.component.html',
+    styleUrls: ['./lista-gravadoras.component.css'],
+    standalone: true,
+    imports: [NgFor]
 })
 export class ListaGravadorasComponent implements OnInit {
   gravadoras: Gravadora[];
