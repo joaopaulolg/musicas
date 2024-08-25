@@ -1,47 +1,56 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './core/home.component';
-import { ListaArtistasComponent } from './artistas/lista-artistas.component';
-import { ListaEstilosComponent } from './estilos/lista-estilos.component';
-import { ListaGravadorasComponent } from './gravadoras/lista-gravadoras.component';
-import { ListaBandasComponent } from './bandas/lista-bandas.component';
-import { ListaAlbunsComponent } from './albuns/lista-albuns.component';
-
 const routes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent,
-  },
-  {
-    path: 'listarEstilos',
-    component: ListaEstilosComponent,
-  },
-  {
-    path: 'listarArtistas',
-    component: ListaArtistasComponent,
-  },
-  {
-    path: 'listarGravadoras',
-    component: ListaGravadorasComponent,
-  },
-  {
-    path: 'listarBandas',
-    component: ListaBandasComponent,
-  },
-  {
-    path: 'listarAlbuns',
-    component: ListaAlbunsComponent,
-  },
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'home',
-  },
+    {
+        path: 'home',
+        loadComponent: () =>
+            import('./core/home.component').then((m) => m.HomeComponent),
+    },
+    {
+        path: 'listarEstilos',
+        loadComponent: () =>
+            import('./estilos/lista-estilos.component').then(
+                (m) => m.ListaEstilosComponent
+            ),
+    },
+    {
+        path: 'listarArtistas',
+        loadComponent: () =>
+            import('./artistas/lista-artistas.component').then(
+                (m) => m.ListaArtistasComponent
+            ),
+    },
+    {
+        path: 'listarGravadoras',
+        loadComponent: () =>
+            import('./gravadoras/lista-gravadoras.component').then(
+                (m) => m.ListaGravadorasComponent
+            ),
+    },
+    {
+        path: 'listarBandas',
+        loadComponent: () =>
+            import('./bandas/lista-bandas.component').then(
+                (m) => m.ListaBandasComponent
+            ),
+    },
+    {
+        path: 'listarAlbuns',
+        loadComponent: () =>
+            import('./albuns/lista-albuns.component').then(
+                (m) => m.ListaAlbunsComponent
+            ),
+    },
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home',
+    },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
 export class AppRoutingModule {}
