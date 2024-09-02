@@ -2,9 +2,9 @@ package com.joaoplg.musicas.persistence;
 
 import java.util.List;
 
-import javax.persistence.TypedQuery;
-
 import com.joaoplg.musicas.entities.MembrosBanda;
+
+import jakarta.persistence.TypedQuery;
 
 public class MembrosBandaDAO extends GenericDAO<MembrosBanda> {
 
