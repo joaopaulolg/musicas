@@ -1,0 +1,31 @@
+<header ng-include="'partials/header.html'">
+</header>
+
+<div class="mt-4 mb-4">
+    <a class="btn btn-primary" ng-click="adicionar()">
+        <img src="img/new_small.png" alt="Novo Artista" class="icon-img">
+        <span class="text-white font-weight-bold">Novo Artista</span>
+    </a>
+</div>
+
+<table class="table table-bordered">
+    <thead class="thead-light">
+        <tr class="text-center">
+            <th style="width: 90%;">Nome</th>
+            <th style="width: 10%;">*</th>
+        </tr>
+    </thead>
+    <tr ng-repeat="artista in artistas">
+        <td style="width: 90%;">{{artista.nome}}</td>
+        <td class= "p-0 text-center" style="width: 10%;">
+            <a class="btn btn-link p-0" ng-click="editar(artista.id)">
+                <img src="img/edit_small.png" alt="Editar">
+            </a>
+            <a class="btn btn-link p-0" ng-click="excluir(artista.id)">
+                <img src="img/delete_small.png" alt="Excluir">
+            </a>
+        </td>
+    </tr>
+    <tfoot>
+    </tfoot>
+</table>
