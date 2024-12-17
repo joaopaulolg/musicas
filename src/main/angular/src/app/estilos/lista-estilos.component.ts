@@ -6,7 +6,6 @@ import { MatTable, MatColumnDef, MatHeaderCellDef, MatHeaderCell, MatCellDef, Ma
     selector: 'rip-lista-estilos',
     templateUrl: './lista-estilos.component.html',
     styleUrls: ['./lista-estilos.component.css'],
-    standalone: true,
     imports: [
         MatTable,
         MatColumnDef,
@@ -22,7 +21,7 @@ import { MatTable, MatColumnDef, MatHeaderCellDef, MatHeaderCell, MatCellDef, Ma
         MatRow,
         MatFooterRowDef,
         MatFooterRow,
-    ],
+    ]
 })
 export class ListaEstilosComponent implements OnInit {
     estilos: Estilo[];

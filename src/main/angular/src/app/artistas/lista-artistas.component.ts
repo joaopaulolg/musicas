@@ -7,7 +7,6 @@ import { Artista } from '../shared/model/artista';
     selector: 'rip-lista-artistas',
     templateUrl: './lista-artistas.component.html',
     styleUrls: ['./lista-artistas.component.css'],
-    standalone: true,
     imports: [
         MatTable,
         MatColumnDef,
@@ -23,7 +22,7 @@ import { Artista } from '../shared/model/artista';
         MatRow,
         MatFooterRowDef,
         MatFooterRow,
-    ],
+    ]
 })
 export class ListaArtistasComponent implements OnInit {
     artistas: Artista[];

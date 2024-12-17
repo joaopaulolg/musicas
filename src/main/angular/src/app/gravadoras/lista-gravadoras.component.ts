@@ -5,8 +5,7 @@ import { Gravadora } from '../shared/model/gravadora';
     selector: 'rip-lista-gravadoras',
     templateUrl: './lista-gravadoras.component.html',
     styleUrls: ['./lista-gravadoras.component.css'],
-    standalone: true,
-    imports: [],
+    imports: []
 })
 export class ListaGravadorasComponent implements OnInit {
     gravadoras: Gravadora[];
